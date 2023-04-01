@@ -1,0 +1,76 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header h1{
+	font-family: Papyrus, Fantasy;
+	color: green;
+	text-align: center;
+	font-size: 50px;
+	border-bottom: solid 3px green;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .recipe {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60%;
+  }
+  
+  .recipe-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .recipe:hover .recipe-img {
+    transform: scale(1.1);
+  }
+  .recipe:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .recipe-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media only screen and (max-width: 510px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  

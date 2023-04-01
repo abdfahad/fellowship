@@ -1,0 +1,119 @@
+@import 'reset';
+@import 'variables';
+
+@mixin flex($direction, $justify){
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin mobile{
+    @media(max-width: $mobile-size){
+        @content;
+    }
+}
+
+body{
+    background-image: $backgroud-image;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+main{
+
+    @include flex(column, start);
+    
+    @include mobile{
+        justify-content: center;
+
+        .logo{
+            margin-left: 0;
+        }
+    }
+    .logo{
+        margin-left: 5vw;
+        img{
+            width: 450px;
+            height: 300px;
+        }
+    }
+    .watch-prompt{
+
+        @include flex (row, center);
+        align-items: center;
+        margin-left: 5vw;
+        margin-top:20px;
+        width: 450px;
+        height: 80px;
+        transition: background-color 0.5s ease;
+        border: white solid 2px;
+        
+        text-decoration: none;
+
+        &:hover{
+            background-color: rgba($color:grey, $alpha: 0.4);
+           
+        }
+
+        .watch{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: xx-large;
+            color: yellow;
+            font-weight: 800;
+        }
+
+    }
+
+    .cards{
+        
+        @include flex(row, space-evenly);
+        @include mobile{
+            @include flex(column, center);
+            width: 100%;
+            align-items: center;
+            a{
+                margin-top: 20px;
+                width: 80%;
+            }
+        }
+        margin-top: 40px;
+
+        a{
+            &:hover{
+                animation: glitch 2s infinite;
+            }
+        }
+        .card{
+            border: white solid 2px;
+            padding: 60px;
+
+            h2{
+                font-family: 'Courier New', Courier, monospace;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+@keyframes glitch {
+    0% {
+      background-color: red;
+    }
+    25% {
+      background-color:yellow;
+     
+    }
+    50% {
+      background-color: grey;
+      
+    }
+    75% {
+      background-color: yellow;
+      
+    }
+    100% {
+      background-color: yellow;
+      
+    }
+  }

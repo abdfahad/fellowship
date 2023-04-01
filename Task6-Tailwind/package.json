@@ -1,0 +1,17 @@
+{
+  "name": "task6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-tail": "npx tailwindcss -i input_tail.css -o output_tail.css --watch",
+    "build-tail": "npx tailwindcss -i input_tail.css -o output_tail.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}

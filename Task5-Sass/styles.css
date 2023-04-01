@@ -1,0 +1,170 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("img/wallpaperflare.com_wallpaper.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+  main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .logo {
+    margin-left: 0;
+  }
+}
+
+main .logo {
+  margin-left: 5vw;
+}
+
+main .logo img {
+  width: 450px;
+  height: 300px;
+}
+
+main .watch-prompt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 5vw;
+  margin-top: 20px;
+  width: 450px;
+  height: 80px;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  border: white solid 2px;
+  text-decoration: none;
+}
+
+main .watch-prompt:hover {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+
+main .watch-prompt .watch {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: xx-large;
+  color: yellow;
+  font-weight: 800;
+}
+
+main .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 40px;
+}
+
+@media (max-width: 1000px) {
+  main .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .cards a {
+    margin-top: 20px;
+    width: 80%;
+  }
+}
+
+main .cards a:hover {
+  -webkit-animation: glitch 2s infinite;
+          animation: glitch 2s infinite;
+}
+
+main .cards .card {
+  border: white solid 2px;
+  padding: 60px;
+}
+
+main .cards .card h2 {
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 2px;
+}
+
+@-webkit-keyframes glitch {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: grey;
+  }
+  75% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: grey;
+  }
+  75% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
